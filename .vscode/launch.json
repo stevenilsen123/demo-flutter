@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (Pixel 6)",
+            "program": "lib/main.dart",
+            "cwd": "demo",
+            "flutterMode": "debug",
+            "deviceId": "24061FDF6003AZ",
+            "request": "launch",
+            "type": "dart",
+            "presentation": {
+                "group": "Debug"
+            }
+        },
+        {
+            "name": "Debug (Web Server)",
+            "program": "lib/main.dart",
+            "cwd": "demo",
+            "flutterMode": "debug",
+            "deviceId": "web-server",
+            "args": ["--web-port", "1983"],
+            "request": "launch",
+            "type": "dart",
+            "presentation": {
+                "group": "Debug"
+            }
+        },
+        {
+            "name": "Release (Pixel 6)",
+            "program": "lib/main.dart",
+            "cwd": "demo",
+            "flutterMode": "release",
+            "deviceId": "24061FDF6003AZ",
+            "request": "launch",
+            "type": "dart",
+            "presentation": {
+                "group": "Release"
+            }
+        },
+        {
+            "name": "Release (Web Server)",
+            "program": "lib/main.dart",
+            "cwd": "demo",
+            "flutterMode": "release",
+            "deviceId": "web-server",
+            "args": ["--web-port", "1984"],
+            "request": "launch",
+            "type": "dart",
+            "presentation": {
+                "group": "Release"
+            }
+        }
+    ]
+}

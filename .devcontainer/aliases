@@ -1,0 +1,18 @@
+alias c='clear'
+alias sc='systemctl'
+alias ll='ls -ll'
+alias lh='ls -lh'
+alias la='ls -a'
+alias lha='ls -lha'
+
+alias f='flutter'
+alias fp='flutter pub'
+alias goHome='cd ~/workspace/demo'
+
+alias clean='goHome && f clean'
+alias build='clean && f build web && f build appbundle'
+alias buildrelease='clean && f build web --release && f build appbundle --release'
+alias test='TODO'
+alias run='goHome && f run -d web-server --web-port=1983'
+alias releaseGamma='buildRelease && && firebase hosting:channel:deploy gamma'
+alias release='cd ~/workspace && mvn clean deploy'

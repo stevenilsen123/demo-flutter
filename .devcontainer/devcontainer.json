@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "Demo Flutter App",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+	"privileged": true,
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/dev/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/home/dev/workspace",
+	"mounts": [
+		// For USB access from within the container
+		"source=/dev/bus/usb,target=/dev/bus/usb,type=bind,consistency=cached",
+		// To connect to the host Linux display
+		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Basics
+				"streetsidesoftware.code-spell-checker",	// Code Spell Checker
+				"mhutchie.git-graph",						// Git Graph
+				"waderyan.gitblame",						// Git Blame
+				"ahgood.shift-shift",						// shift shift
+
+				// Markdown
+				"yzhang.markdown-all-in-one",				// Markdown All in One
+				"shd101wyy.markdown-preview-enhanced",		// Markdown Preview Enhanced
+				"RomanPeshkov.vscode-text-tables",			// Text Tables
+				"bierner.markdown-mermaid",					// Markdown Preview Mermaid Support
+
+				// App-specific stuff
+				"dart-code.dart-code",						// Dart
+				"dart-code.flutter"							// Flutter
+			]
+		}
+	},
+	"containerEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}"
+	},
+	"runArgs": [
+		"--device",
+		"/dev/kvm",
+		"--device",
+		"/dev/dri:/dev/dri"
+	]
+}
